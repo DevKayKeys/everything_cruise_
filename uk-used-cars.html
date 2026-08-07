@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UK Used Cars | Everything Cruise</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="bg-carousel" id="bgCarousel"></div>
+
+  <div class="page-wrapper">
+    <nav>
+      <a href="index.html" class="nav-logo">
+        <img src="./Images/1-removebg-preview.png" alt="Everything Cruise Logo" />
+        <span>Everything Cruise</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <a href="services.html" class="back-link">&larr; Back to Services</a>
+      <h2 class="section-title">🇬🇧 UK Used Cars</h2>
+      <p class="section-sub">Imported directly from the UK — thoroughly inspected, verified history, quality you can trust.</p>
+
+      <div class="car-cards">
+        <div class="car-card">
+          <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=600&q=80" alt="BMW 3 Series" />
+          <div class="car-card-body">
+            <h3>BMW 3 Series 2020</h3>
+            <p>Sporty executive saloon with turbocharged engine, leather interior, and full service history.</p>
+            <span class="car-price-tag">₦18,000,000 – ₦22,000,000</span>
+          </div>
+        </div>
+        <div class="car-card">
+          <img src="https://images.unsplash.com/photo-1617469767053-d3b523a0b982?auto=format&fit=crop&w=600&q=80" alt="Mercedes C-Class" />
+          <div class="car-card-body">
+            <h3>Mercedes-Benz C-Class 2019</h3>
+            <p>Luxury saloon with panoramic sunroof, AMG styling pack, and low mileage from UK.</p>
+            <span class="car-price-tag">₦20,000,000 – ₦26,000,000</span>
+          </div>
+        </div>
+        <div class="car-card">
+          <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=600&q=80" alt="Range Rover Evoque" />
+          <div class="car-card-body">
+            <h3>Range Rover Evoque 2021</h3>
+            <p>Compact luxury SUV with terrain response system, heated seats, and premium sound.</p>
+            <span class="car-price-tag">₦32,000,000 – ₦40,000,000</span>
+          </div>
+        </div>
+        <div class="car-card">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80" alt="Audi A4" />
+          <div class="car-card-body">
+            <h3>Audi A4 2020</h3>
+            <p>Refined German engineering with virtual cockpit, quattro AWD, and premium interior trim.</p>
+            <span class="car-price-tag">₦17,500,000 – ₦23,000,000</span>
+          </div>
+        </div>
+        <div class="car-card">
+          <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=600&q=80" alt="Volkswagen Tiguan" />
+          <div class="car-card-body">
+            <h3>Volkswagen Tiguan 2021</h3>
+            <p>Practical family SUV with 7-seat option, DSG gearbox, and excellent fuel economy.</p>
+            <span class="car-price-tag">₦16,000,000 – ₦20,000,000</span>
+          </div>
+        </div>
+        <div class="car-card">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" alt="Ford Explorer" />
+          <div class="car-card-body">
+            <h3>Ford Explorer 2020</h3>
+            <p>Bold American SUV with 3-row seating, powerful V6 engine, and advanced driver aids.</p>
+            <span class="car-price-tag">₦19,000,000 – ₦24,000,000</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-center">
+        <a href="contact.html" class="btn">Enquire About a Car</a>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 <span>Everything Cruise</span>. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <button id="chat-toggle" aria-label="Open support chat">💬</button>
+  <div id="chat-box" class="hidden" role="dialog" aria-label="Customer support chat">
+    <div class="chat-header">
+      <span>Everything Cruise Support</span>
+      <button id="chat-close" aria-label="Close chat">✕</button>
+    </div>
+    <div id="chat-messages" aria-live="polite"></div>
+    <div class="chat-input-row">
+      <input id="chat-input" type="text" placeholder="Ask about our cars..." autocomplete="off" />
+      <button id="chat-send">Send</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/chat.js"></script>
+  <script>
+    const bgImages = [
+      'Images/IMG-20241225-WA0039.jpg',
+      'Images/IMG-20241229-WA0017.jpg',
+      'Images/IMG-20241230-WA0052.jpg',
+      'Images/IMG-20241230-WA0054.jpg',
+      'Images/IMG-20240723-WA0062.jpg',
+      'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=80',
+      'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80',
+      'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=1920&q=80',
+      'https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1920&q=80',
+    ];
+    const carousel = document.getElementById('bgCarousel');
+    bgImages.forEach((src, i) => {
+      const slide = document.createElement('div');
+      slide.className = 'bg-carousel-slide' + (i === 0 ? ' active' : '');
+      slide.style.backgroundImage = `url('${src}')`;
+      carousel.appendChild(slide);
+    });
+    let current = 0;
+    const slides = carousel.querySelectorAll('.bg-carousel-slide');
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 5000);
+  </script>
+</body>
+</html>

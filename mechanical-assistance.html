@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mechanical Assistance | Everything Cruise</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="bg-carousel" id="bgCarousel"></div>
+
+  <div class="page-wrapper">
+    <nav>
+      <a href="index.html" class="nav-logo">
+        <img src="./Images/1-removebg-preview.png" alt="Everything Cruise Logo" />
+        <span>Everything Cruise</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <a href="services.html" class="back-link">&larr; Back to Services</a>
+      <h2 class="section-title">🔧 Mechanical Assistance</h2>
+      <p class="section-sub">Certified mechanics keeping your vehicle in peak condition — from routine checks to full repairs.</p>
+
+      <div class="car-cards">
+        <div class="car-card">
+          <img src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?auto=format&fit=crop&w=600&q=80" alt="Engine Diagnostics" />
+          <div class="car-card-body">
+            <h3>Engine Diagnostics</h3>
+            <p>Full OBD-II scan and manual inspection to identify faults before they become costly problems.</p>
+            <span class="car-price-tag">₦10,000 – ₦25,000</span>
+          </div>
+        </div>
+        <div class="car-card">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" alt="Oil Change & Servicing" />
+          <div class="car-card-body">
+            <h3>Oil Change & Full Service</h3>
+            <p>Engine oil, filter, spark plugs, air filter, and fluid top-ups — keeping your engine healthy.</p>
+            <span class="car-price-tag">₦15,000 – ₦45,000</span>
+          </div>
+        </div>
+        <div class="car-card">
+          <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=600&q=80" alt="Brake Repair" />
+          <div class="car-card-body">
+            <h3>Brake System Repair</h3>
+            <p>Pad replacement, rotor resurfacing, brake fluid flush — your safety is our priority.</p>
+            <span class="car-price-tag">₦20,000 – ₦80,000</span>
+          </div>
+        </div>
+        <div class="car-card">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80" alt="Suspension & Steering" />
+          <div class="car-card-body">
+            <h3>Suspension & Steering</h3>
+            <p>Shock absorbers, control arms, tie rods, and wheel alignment for a smooth, stable ride.</p>
+            <span class="car-price-tag">₦30,000 – ₦150,000</span>
+          </div>
+        </div>
+        <div class="car-card">
+          <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=600&q=80" alt="AC Repair" />
+          <div class="car-card-body">
+            <h3>Air Conditioning Repair</h3>
+            <p>Gas recharge, compressor repair, and full AC system diagnostics to beat the Nigerian heat.</p>
+            <span class="car-price-tag">₦15,000 – ₦60,000</span>
+          </div>
+        </div>
+        <div class="car-card">
+          <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=600&q=80" alt="Electrical Repairs" />
+          <div class="car-card-body">
+            <h3>Electrical & Auto Electrics</h3>
+            <p>Battery, alternator, starter motor, wiring faults, and ECU repairs handled by specialists.</p>
+            <span class="car-price-tag">₦10,000 – ₦100,000</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-center">
+        <a href="contact.html" class="btn">Book a Service</a>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 <span>Everything Cruise</span>. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <button id="chat-toggle" aria-label="Open support chat">💬</button>
+  <div id="chat-box" class="hidden" role="dialog" aria-label="Customer support chat">
+    <div class="chat-header">
+      <span>Everything Cruise Support</span>
+      <button id="chat-close" aria-label="Close chat">✕</button>
+    </div>
+    <div id="chat-messages" aria-live="polite"></div>
+    <div class="chat-input-row">
+      <input id="chat-input" type="text" placeholder="Ask about our cars..." autocomplete="off" />
+      <button id="chat-send">Send</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/chat.js"></script>
+  <script>
+    const bgImages = [
+      'Images/IMG-20241225-WA0039.jpg',
+      'Images/IMG-20241229-WA0017.jpg',
+      'Images/IMG-20241230-WA0052.jpg',
+      'Images/IMG-20241230-WA0054.jpg',
+      'Images/IMG-20240723-WA0062.jpg',
+      'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=80',
+      'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80',
+      'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=1920&q=80',
+      'https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1920&q=80',
+    ];
+    const carousel = document.getElementById('bgCarousel');
+    bgImages.forEach((src, i) => {
+      const slide = document.createElement('div');
+      slide.className = 'bg-carousel-slide' + (i === 0 ? ' active' : '');
+      slide.style.backgroundImage = `url('${src}')`;
+      carousel.appendChild(slide);
+    });
+    let current = 0;
+    const slides = carousel.querySelectorAll('.bg-carousel-slide');
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 5000);
+  </script>
+</body>
+</html>

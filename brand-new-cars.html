@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brand New Cars | Everything Cruise</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="bg-carousel" id="bgCarousel"></div>
+
+  <div class="page-wrapper">
+    <nav>
+      <a href="index.html" class="nav-logo">
+        <img src="./Images/1-removebg-preview.png" alt="Everything Cruise Logo" />
+        <span>Everything Cruise</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <a href="services.html" class="back-link">&#8592; Back to Services</a>
+
+      <!-- Hero Banner -->
+      <div class="page-hero">
+        <img class="hero-bg" src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1400&q=80" alt="Brand New Cars" />
+        <div class="page-hero-content">
+          <h1>🚗 Brand New Cars</h1>
+          <p>Factory-fresh vehicles with full manufacturer warranty. Every car is zero-mileage, fully certified, and ready to drive off the lot.</p>
+        </div>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <span>Filter by:</span>
+        <button class="filter-btn active" onclick="filterCars('all', this)">All</button>
+        <button class="filter-btn" onclick="filterCars('sedan', this)">Sedans</button>
+        <button class="filter-btn" onclick="filterCars('suv', this)">SUVs</button>
+        <button class="filter-btn" onclick="filterCars('luxury', this)">Luxury</button>
+        <button class="filter-btn" onclick="filterCars('pickup', this)">Pickups</button>
+      </div>
+
+      <!-- Car Cards Grid -->
+      <div class="car-cards" id="car-grid">
+
+        <div class="car-card" data-category="sedan">
+          <div class="car-card-img">
+            <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=700&q=80" alt="Toyota Camry 2025" />
+            <span class="badge badge-new">New 2025</span>
+          </div>
+          <div class="car-card-body">
+            <h3>Toyota Camry</h3>
+            <div class="car-meta">
+              <span>📅 2025</span>
+              <span>⛽ Hybrid / Petrol</span>
+              <span>🚘 Sedan</span>
+            </div>
+            <p>Elegant mid-size sedan with available hybrid powertrain, Toyota Safety Sense, and a premium cabin with 8-inch touchscreen.</p>
+            <div class="car-card-footer">
+              <div class="car-price">
+                ₦28M – ₦35M
+                <small>Starting price</small>
+              </div>
+              <a href="contact.html" class="card-enquire">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="car-card" data-category="suv">
+          <div class="car-card-img">
+            <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=700&q=80" alt="Honda CR-V 2025" />
+            <span class="badge badge-hot">Hot Pick</span>
+          </div>
+          <div class="car-card-body">
+            <h3>Honda CR-V</h3>
+            <div class="car-meta">
+              <span>📅 2025</span>
+              <span>⛽ Petrol / Hybrid</span>
+              <span>🚘 SUV</span>
+            </div>
+            <p>Spacious family SUV with turbocharged engine, Honda Sensing safety suite, and a versatile cargo area perfect for every journey.</p>
+            <div class="car-card-footer">
+              <div class="car-price">
+                ₦32M – ₦40M
+                <small>Starting price</small>
+              </div>
+              <a href="contact.html" class="card-enquire">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="car-card" data-category="luxury">
+          <div class="car-card-img">
+            <img src="https://images.unsplash.com/photo-1617469767053-d3b523a0b982?auto=format&fit=crop&w=700&q=80" alt="Mercedes-Benz C-Class 2025" />
+            <span class="badge badge-new">New 2025</span>
+          </div>
+          <div class="car-card-body">
+            <h3>Mercedes-Benz C-Class</h3>
+            <div class="car-meta">
+              <span>📅 2025</span>
+              <span>⛽ Petrol</span>
+              <span>🚘 Luxury Sedan</span>
+            </div>
+            <p>Redefining executive travel — MBUX infotainment, ambient lighting, turbocharged inline-4, and a cabin that rivals a first-class lounge.</p>
+            <div class="car-card-footer">
+              <div class="car-price">
+                ₦55M – ₦70M
+                <small>Starting price</small>
+              </div>
+              <a href="contact.html" class="card-enquire">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="car-card" data-category="suv luxury">
+          <div class="car-card-img">
+            <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=700&q=80" alt="Range Rover Velar 2025" />
+            <span class="badge badge-hot">Hot Pick</span>
+          </div>
+          <div class="car-card-body">
+            <h3>Range Rover Velar</h3>
+            <div class="car-meta">
+              <span>📅 2025</span>
+              <span>⛽ Petrol / Diesel</span>
+              <span>🚘 Luxury SUV</span>
+            </div>
+            <p>Striking design meets off-road capability — Touch Pro Duo infotainment, air suspension, and a commanding presence on any road.</p>
+            <div class="car-card-footer">
+              <div class="car-price">
+                ₦85M – ₦110M
+                <small>Starting price</small>
+              </div>
+              <a href="contact.html" class="card-enquire">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="car-card" data-category="sedan">
+          <div class="car-card-img">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=700&q=80" alt="Lexus ES 350 2025" />
+            <span class="badge badge-new">New 2025</span>
+          </div>
+          <div class="car-card-body">
+            <h3>Lexus ES 350</h3>
+            <div class="car-meta">
+              <span>📅 2025</span>
+              <span>⛽ Petrol</span>
+              <span>🚘 Luxury Sedan</span>
+            </div>
+            <p>Whisper-quiet V6 engine, Mark Levinson audio, semi-aniline leather seats, and Lexus Safety System+ for total peace of mind.</p>
+            <div class="car-card-footer">
+              <div class="car-price">
+                ₦48M – ₦60M
+                <small>Starting price</small>
+              </div>
+              <a href="contact.html" class="card-enquire">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="car-card" data-category="suv">
+          <div class="car-card-img">
+            <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=700&q=80" alt="Toyota Highlander 2025" />
+            <span class="badge badge-new">New 2025</span>
+          </div>
+          <div class="car-card-body">
+            <h3>Toyota Highlander</h3>
+            <div class="car-meta">
+              <span>📅 2025</span>
+              <span>⛽ Petrol / Hybrid</span>
+              <span>🚘 SUV (7-Seat)</span>
+            </div>
+            <p>The ultimate family hauler — 7-seat capacity, V6 power, panoramic moonroof, and Toyota's legendary reliability baked in.</p>
+            <div class="car-card-footer">
+              <div class="car-price">
+                ₦42M – ₦55M
+                <small>Starting price</small>
+              </div>
+              <a href="contact.html" class="card-enquire">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="car-card" data-category="pickup">
+          <div class="car-card-img">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=700&q=80" alt="Toyota Hilux 2025" />
+            <span class="badge badge-new">New 2025</span>
+          </div>
+          <div class="car-card-body">
+            <h3>Toyota Hilux</h3>
+            <div class="car-meta">
+              <span>📅 2025</span>
+              <span>⛽ Diesel</span>
+              <span>🚘 Pickup Truck</span>
+            </div>
+            <p>Built for Nigeria's toughest terrain — 4x4 capability, 2.8L turbodiesel, high payload capacity, and legendary durability.</p>
+            <div class="car-card-footer">
+              <div class="car-price">
+                ₦38M – ₦48M
+                <small>Starting price</small>
+              </div>
+              <a href="contact.html" class="card-enquire">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="car-card" data-category="luxury suv">
+          <div class="car-card-img">
+            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=700&q=80" alt="BMW X5 2025" />
+            <span class="badge badge-hot">Hot Pick</span>
+          </div>
+          <div class="car-card-body">
+            <h3>BMW X5</h3>
+            <div class="car-meta">
+              <span>📅 2025</span>
+              <span>⛽ Petrol / Diesel</span>
+              <span>🚘 Luxury SUV</span>
+            </div>
+            <p>The benchmark luxury SUV — xDrive AWD, panoramic sky lounge roof, Harman Kardon audio, and M Sport styling package.</p>
+            <div class="car-card-footer">
+              <div class="car-price">
+                ₦90M – ₦120M
+                <small>Starting price</small>
+              </div>
+              <a href="contact.html" class="card-enquire">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="car-card" data-category="sedan">
+          <div class="car-card-img">
+            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=700&q=80" alt="Honda Accord 2025" />
+            <span class="badge badge-new">New 2025</span>
+          </div>
+          <div class="car-card-body">
+            <h3>Honda Accord</h3>
+            <div class="car-meta">
+              <span>📅 2025</span>
+              <span>⛽ Hybrid / Petrol</span>
+              <span>🚘 Sedan</span>
+            </div>
+            <p>Redesigned with a bold stance — turbocharged hybrid, 12.3-inch touchscreen, Google built-in, and Honda Sensing as standard.</p>
+            <div class="car-card-footer">
+              <div class="car-price">
+                ₦30M – ₦38M
+                <small>Starting price</small>
+              </div>
+              <a href="contact.html" class="card-enquire">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Trust Strip -->
+      <div class="trust-strip">
+        <div class="trust-item">
+          <span class="icon">✅</span>
+          <div><strong>100% Genuine</strong><br>Direct from authorised dealers</div>
+        </div>
+        <div class="trust-item">
+          <span class="icon">🛡️</span>
+          <div><strong>Full Warranty</strong><br>Manufacturer warranty included</div>
+        </div>
+        <div class="trust-item">
+          <span class="icon">📄</span>
+          <div><strong>Clean Papers</strong><br>All documentation handled</div>
+        </div>
+        <div class="trust-item">
+          <span class="icon">🚚</span>
+          <div><strong>Delivery Available</strong><br>We deliver nationwide</div>
+        </div>
+        <div class="trust-item">
+          <span class="icon">💳</span>
+          <div><strong>Flexible Payment</strong><br>Installment plans available</div>
+        </div>
+      </div>
+
+      <!-- CTA Banner -->
+      <div class="cta-banner">
+        <h2>Can't find what you're looking for?</h2>
+        <p>We can source any make or model on request. Talk to our team and we'll find your perfect car.</p>
+        <a href="contact.html" class="btn">Talk to Us Today</a>
+      </div>
+
+    </main>
+
+    <footer>
+      <p>&copy; 2026 <span>Everything Cruise</span>. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- AI Chat Widget -->
+  <button id="chat-toggle" aria-label="Open support chat">💬</button>
+  <div id="chat-box" class="hidden" role="dialog" aria-label="Customer support chat">
+    <div class="chat-header">
+      <span>Everything Cruise Support</span>
+      <button id="chat-close" aria-label="Close chat">✕</button>
+    </div>
+    <div id="chat-messages" aria-live="polite"></div>
+    <div class="chat-input-row">
+      <input id="chat-input" type="text" placeholder="Ask about our cars..." autocomplete="off" />
+      <button id="chat-send">Send</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/chat.js"></script>
+  <script>
+    const bgImages = [
+      'Images/IMG-20241225-WA0039.jpg',
+      'Images/IMG-20241229-WA0017.jpg',
+      'Images/IMG-20241230-WA0052.jpg',
+      'Images/IMG-20241230-WA0054.jpg',
+      'Images/IMG-20240723-WA0062.jpg',
+      'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=80',
+      'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80',
+      'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=1920&q=80',
+      'https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1920&q=80',
+    ];
+    const carousel = document.getElementById('bgCarousel');
+    bgImages.forEach((src, i) => {
+      const slide = document.createElement('div');
+      slide.className = 'bg-carousel-slide' + (i === 0 ? ' active' : '');
+      slide.style.backgroundImage = `url('${src}')`;
+      carousel.appendChild(slide);
+    });
+    let current = 0;
+    const slides = carousel.querySelectorAll('.bg-carousel-slide');
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 5000);
+  </script>
+  <script>
+    function filterCars(category, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.car-card').forEach(card => {
+        const cats = card.dataset.category || '';
+        card.style.display = (category === 'all' || cats.includes(category)) ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
