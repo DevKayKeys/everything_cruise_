@@ -4,7 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Brand New Cars | Everything Cruise</title>
+  <meta name="description" content="Buy brand new cars in Nigeria with full manufacturer warranty. Toyota, Honda, Mercedes, Range Rover, Lexus, BMW and more - zero mileage, fully certified, nationwide delivery." />
+  <meta name="author" content="Everything Cruise" />
+  <link rel="canonical" href="https://www.everythingcruise.com/brand-new-cars.html" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <link rel="icon" type="image/png" href="./Images/1-removebg-preview.png" />
+  <link rel="apple-touch-icon" href="./Images/1-removebg-preview.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Everything Cruise" />
+  <meta property="og:title" content="Brand New Cars | Everything Cruise" />
+  <meta property="og:description" content="Factory-fresh vehicles with full manufacturer warranty. Zero-mileage, fully certified and ready to drive." />
+  <meta property="og:url" content="https://www.everythingcruise.com/brand-new-cars.html" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Brand New Cars | Everything Cruise" />
+  <meta name="twitter:description" content="Factory-fresh vehicles with full manufacturer warranty." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80" />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="preconnect" href="https://use.hugeicons.com" crossorigin />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://use.hugeicons.com/font/icons.css" />
 </head>
 <body>
   <div class="bg-carousel" id="bgCarousel"></div>
@@ -15,7 +34,8 @@
         <img src="./Images/1-removebg-preview.png" alt="Everything Cruise Logo" />
         <span>Everything Cruise</span>
       </a>
-      <ul class="nav-links">
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><i class="hgi-stroke hgi-menu-02"></i></button>
+      <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html" class="active">Services</a></li>
@@ -30,7 +50,7 @@
       <div class="page-hero">
         <img class="hero-bg" src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1400&q=80" alt="Brand New Cars" />
         <div class="page-hero-content">
-          <h1>🚗 Brand New Cars</h1>
+          <h1><i class="hgi-stroke hgi-car-01 title-icon"></i>Brand New Cars</h1>
           <p>Factory-fresh vehicles with full manufacturer warranty. Every car is zero-mileage, fully certified, and ready to drive off the lot.</p>
         </div>
       </div>
@@ -38,11 +58,11 @@
       <!-- Filter Bar -->
       <div class="filter-bar">
         <span>Filter by:</span>
-        <button class="filter-btn active" onclick="filterCars('all', this)">All</button>
-        <button class="filter-btn" onclick="filterCars('sedan', this)">Sedans</button>
-        <button class="filter-btn" onclick="filterCars('suv', this)">SUVs</button>
-        <button class="filter-btn" onclick="filterCars('luxury', this)">Luxury</button>
-        <button class="filter-btn" onclick="filterCars('pickup', this)">Pickups</button>
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="sedan">Sedans</button>
+        <button class="filter-btn" data-filter="suv">SUVs</button>
+        <button class="filter-btn" data-filter="luxury">Luxury</button>
+        <button class="filter-btn" data-filter="pickup">Pickups</button>
       </div>
 
       <!-- Car Cards Grid -->
@@ -50,15 +70,15 @@
 
         <div class="car-card" data-category="sedan">
           <div class="car-card-img">
-            <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=700&q=80" alt="Toyota Camry 2025" />
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=700&q=80" alt="Toyota Camry 2025" />
             <span class="badge badge-new">New 2025</span>
           </div>
           <div class="car-card-body">
             <h3>Toyota Camry</h3>
             <div class="car-meta">
-              <span>📅 2025</span>
-              <span>⛽ Hybrid / Petrol</span>
-              <span>🚘 Sedan</span>
+              <span><i class="hgi-stroke hgi-calendar-01"></i> 2025</span>
+              <span><i class="hgi-stroke hgi-fuel-02"></i> Hybrid / Petrol</span>
+              <span><i class="hgi-stroke hgi-car-03"></i> Sedan</span>
             </div>
             <p>Elegant mid-size sedan with available hybrid powertrain, Toyota Safety Sense, and a premium cabin with 8-inch touchscreen.</p>
             <div class="car-card-footer">
@@ -73,15 +93,15 @@
 
         <div class="car-card" data-category="suv">
           <div class="car-card-img">
-            <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=700&q=80" alt="Honda CR-V 2025" />
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=700&q=80" alt="Honda CR-V 2025" />
             <span class="badge badge-hot">Hot Pick</span>
           </div>
           <div class="car-card-body">
             <h3>Honda CR-V</h3>
             <div class="car-meta">
-              <span>📅 2025</span>
-              <span>⛽ Petrol / Hybrid</span>
-              <span>🚘 SUV</span>
+              <span><i class="hgi-stroke hgi-calendar-01"></i> 2025</span>
+              <span><i class="hgi-stroke hgi-fuel-02"></i> Petrol / Hybrid</span>
+              <span><i class="hgi-stroke hgi-car-03"></i> SUV</span>
             </div>
             <p>Spacious family SUV with turbocharged engine, Honda Sensing safety suite, and a versatile cargo area perfect for every journey.</p>
             <div class="car-card-footer">
@@ -96,15 +116,15 @@
 
         <div class="car-card" data-category="luxury">
           <div class="car-card-img">
-            <img src="https://images.unsplash.com/photo-1617469767053-d3b523a0b982?auto=format&fit=crop&w=700&q=80" alt="Mercedes-Benz C-Class 2025" />
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1617469767053-d3b523a0b982?auto=format&fit=crop&w=700&q=80" alt="Mercedes-Benz C-Class 2025" />
             <span class="badge badge-new">New 2025</span>
           </div>
           <div class="car-card-body">
             <h3>Mercedes-Benz C-Class</h3>
             <div class="car-meta">
-              <span>📅 2025</span>
-              <span>⛽ Petrol</span>
-              <span>🚘 Luxury Sedan</span>
+              <span><i class="hgi-stroke hgi-calendar-01"></i> 2025</span>
+              <span><i class="hgi-stroke hgi-fuel-02"></i> Petrol</span>
+              <span><i class="hgi-stroke hgi-car-03"></i> Luxury Sedan</span>
             </div>
             <p>Redefining executive travel — MBUX infotainment, ambient lighting, turbocharged inline-4, and a cabin that rivals a first-class lounge.</p>
             <div class="car-card-footer">
@@ -119,15 +139,15 @@
 
         <div class="car-card" data-category="suv luxury">
           <div class="car-card-img">
-            <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=700&q=80" alt="Range Rover Velar 2025" />
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=700&q=80" alt="Range Rover Velar 2025" />
             <span class="badge badge-hot">Hot Pick</span>
           </div>
           <div class="car-card-body">
             <h3>Range Rover Velar</h3>
             <div class="car-meta">
-              <span>📅 2025</span>
-              <span>⛽ Petrol / Diesel</span>
-              <span>🚘 Luxury SUV</span>
+              <span><i class="hgi-stroke hgi-calendar-01"></i> 2025</span>
+              <span><i class="hgi-stroke hgi-fuel-02"></i> Petrol / Diesel</span>
+              <span><i class="hgi-stroke hgi-car-03"></i> Luxury SUV</span>
             </div>
             <p>Striking design meets off-road capability — Touch Pro Duo infotainment, air suspension, and a commanding presence on any road.</p>
             <div class="car-card-footer">
@@ -142,15 +162,15 @@
 
         <div class="car-card" data-category="sedan">
           <div class="car-card-img">
-            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=700&q=80" alt="Lexus ES 350 2025" />
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=700&q=80" alt="Lexus ES 350 2025" />
             <span class="badge badge-new">New 2025</span>
           </div>
           <div class="car-card-body">
             <h3>Lexus ES 350</h3>
             <div class="car-meta">
-              <span>📅 2025</span>
-              <span>⛽ Petrol</span>
-              <span>🚘 Luxury Sedan</span>
+              <span><i class="hgi-stroke hgi-calendar-01"></i> 2025</span>
+              <span><i class="hgi-stroke hgi-fuel-02"></i> Petrol</span>
+              <span><i class="hgi-stroke hgi-car-03"></i> Luxury Sedan</span>
             </div>
             <p>Whisper-quiet V6 engine, Mark Levinson audio, semi-aniline leather seats, and Lexus Safety System+ for total peace of mind.</p>
             <div class="car-card-footer">
@@ -165,15 +185,15 @@
 
         <div class="car-card" data-category="suv">
           <div class="car-card-img">
-            <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=700&q=80" alt="Toyota Highlander 2025" />
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=700&q=80" alt="Toyota Highlander 2025" />
             <span class="badge badge-new">New 2025</span>
           </div>
           <div class="car-card-body">
             <h3>Toyota Highlander</h3>
             <div class="car-meta">
-              <span>📅 2025</span>
-              <span>⛽ Petrol / Hybrid</span>
-              <span>🚘 SUV (7-Seat)</span>
+              <span><i class="hgi-stroke hgi-calendar-01"></i> 2025</span>
+              <span><i class="hgi-stroke hgi-fuel-02"></i> Petrol / Hybrid</span>
+              <span><i class="hgi-stroke hgi-car-03"></i> SUV (7-Seat)</span>
             </div>
             <p>The ultimate family hauler — 7-seat capacity, V6 power, panoramic moonroof, and Toyota's legendary reliability baked in.</p>
             <div class="car-card-footer">
@@ -188,15 +208,15 @@
 
         <div class="car-card" data-category="pickup">
           <div class="car-card-img">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=700&q=80" alt="Toyota Hilux 2025" />
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=700&q=80" alt="Toyota Hilux 2025" />
             <span class="badge badge-new">New 2025</span>
           </div>
           <div class="car-card-body">
             <h3>Toyota Hilux</h3>
             <div class="car-meta">
-              <span>📅 2025</span>
-              <span>⛽ Diesel</span>
-              <span>🚘 Pickup Truck</span>
+              <span><i class="hgi-stroke hgi-calendar-01"></i> 2025</span>
+              <span><i class="hgi-stroke hgi-fuel-02"></i> Diesel</span>
+              <span><i class="hgi-stroke hgi-car-03"></i> Pickup Truck</span>
             </div>
             <p>Built for Nigeria's toughest terrain — 4x4 capability, 2.8L turbodiesel, high payload capacity, and legendary durability.</p>
             <div class="car-card-footer">
@@ -211,15 +231,15 @@
 
         <div class="car-card" data-category="luxury suv">
           <div class="car-card-img">
-            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=700&q=80" alt="BMW X5 2025" />
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=700&q=80" alt="BMW X5 2025" />
             <span class="badge badge-hot">Hot Pick</span>
           </div>
           <div class="car-card-body">
             <h3>BMW X5</h3>
             <div class="car-meta">
-              <span>📅 2025</span>
-              <span>⛽ Petrol / Diesel</span>
-              <span>🚘 Luxury SUV</span>
+              <span><i class="hgi-stroke hgi-calendar-01"></i> 2025</span>
+              <span><i class="hgi-stroke hgi-fuel-02"></i> Petrol / Diesel</span>
+              <span><i class="hgi-stroke hgi-car-03"></i> Luxury SUV</span>
             </div>
             <p>The benchmark luxury SUV — xDrive AWD, panoramic sky lounge roof, Harman Kardon audio, and M Sport styling package.</p>
             <div class="car-card-footer">
@@ -234,15 +254,15 @@
 
         <div class="car-card" data-category="sedan">
           <div class="car-card-img">
-            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=700&q=80" alt="Honda Accord 2025" />
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=700&q=80" alt="Honda Accord 2025" />
             <span class="badge badge-new">New 2025</span>
           </div>
           <div class="car-card-body">
             <h3>Honda Accord</h3>
             <div class="car-meta">
-              <span>📅 2025</span>
-              <span>⛽ Hybrid / Petrol</span>
-              <span>🚘 Sedan</span>
+              <span><i class="hgi-stroke hgi-calendar-01"></i> 2025</span>
+              <span><i class="hgi-stroke hgi-fuel-02"></i> Hybrid / Petrol</span>
+              <span><i class="hgi-stroke hgi-car-03"></i> Sedan</span>
             </div>
             <p>Redesigned with a bold stance — turbocharged hybrid, 12.3-inch touchscreen, Google built-in, and Honda Sensing as standard.</p>
             <div class="car-card-footer">
@@ -260,23 +280,23 @@
       <!-- Trust Strip -->
       <div class="trust-strip">
         <div class="trust-item">
-          <span class="icon">✅</span>
+          <span class="icon hgi-stroke hgi-badge-check"></span>
           <div><strong>100% Genuine</strong><br>Direct from authorised dealers</div>
         </div>
         <div class="trust-item">
-          <span class="icon">🛡️</span>
+          <span class="icon hgi-stroke hgi-shield-check"></span>
           <div><strong>Full Warranty</strong><br>Manufacturer warranty included</div>
         </div>
         <div class="trust-item">
-          <span class="icon">📄</span>
+          <span class="icon hgi-stroke hgi-document-validation"></span>
           <div><strong>Clean Papers</strong><br>All documentation handled</div>
         </div>
         <div class="trust-item">
-          <span class="icon">🚚</span>
+          <span class="icon hgi-stroke hgi-delivery-truck-01"></span>
           <div><strong>Delivery Available</strong><br>We deliver nationwide</div>
         </div>
         <div class="trust-item">
-          <span class="icon">💳</span>
+          <span class="icon hgi-stroke hgi-credit-card"></span>
           <div><strong>Flexible Payment</strong><br>Installment plans available</div>
         </div>
       </div>
@@ -291,62 +311,51 @@
     </main>
 
     <footer>
-      <p>&copy; 2026 <span>Everything Cruise</span>. All rights reserved.</p>
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="nav-logo">
+            <img src="./Images/1-removebg-preview.png" alt="Everything Cruise Logo" />
+            <span>Everything Cruise</span>
+          </a>
+          <p>Your trusted destination for brand new, UK used and Nigerian used cars, car swaps and expert mechanical support in Abeokuta, Nigeria.</p>
+          <div class="footer-socials">
+            <a href="https://wa.me/2348121966147" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="hgi-stroke hgi-whatsapp"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Follow on Instagram"><i class="hgi-stroke hgi-instagram"></i></a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Follow on Facebook"><i class="hgi-stroke hgi-facebook-01"></i></a>
+            <a href="https://x.com/" target="_blank" rel="noopener" aria-label="Follow on Twitter"><i class="hgi-stroke hgi-twitter"></i></a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="Watch on YouTube"><i class="hgi-stroke hgi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <a href="brand-new-cars.html">Brand New Cars</a>
+          <a href="uk-used-cars.html">UK Used Cars</a>
+          <a href="nigerian-used-cars.html">Nigerian Used Cars</a>
+          <a href="car-swap.html">Car Swap</a>
+          <a href="mechanical-assistance.html">Mechanical Assistance</a>
+        </div>
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <a href="mailto:kaykeys864@gmail.com"><i class="hgi-stroke hgi-mail-01"></i> kaykeys864@gmail.com</a>
+          <a href="tel:+2348121966147"><i class="hgi-stroke hgi-phone"></i> +234 812 196 6147</a>
+          <a href="https://maps.google.com/?q=Abeokuta+Nigeria" target="_blank" rel="noopener"><i class="hgi-stroke hgi-map-pin"></i> Abeokuta, Nigeria</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year">2026</span> <span>Everything Cruise</span>. All rights reserved.</p>
+      </div>
     </footer>
   </div>
 
-  <!-- AI Chat Widget -->
-  <button id="chat-toggle" aria-label="Open support chat">💬</button>
-  <div id="chat-box" class="hidden" role="dialog" aria-label="Customer support chat">
-    <div class="chat-header">
-      <span>Everything Cruise Support</span>
-      <button id="chat-close" aria-label="Close chat">✕</button>
-    </div>
-    <div id="chat-messages" aria-live="polite"></div>
-    <div class="chat-input-row">
-      <input id="chat-input" type="text" placeholder="Ask about our cars..." autocomplete="off" />
-      <button id="chat-send">Send</button>
-    </div>
-  </div>
 
-  <script src="js/main.js"></script>
-  <script src="js/chat.js"></script>
-  <script>
-    const bgImages = [
-      'Images/IMG-20241225-WA0039.jpg',
-      'Images/IMG-20241229-WA0017.jpg',
-      'Images/IMG-20241230-WA0052.jpg',
-      'Images/IMG-20241230-WA0054.jpg',
-      'Images/IMG-20240723-WA0062.jpg',
-      'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=80',
-      'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80',
-      'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=1920&q=80',
-      'https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1920&q=80',
-    ];
-    const carousel = document.getElementById('bgCarousel');
-    bgImages.forEach((src, i) => {
-      const slide = document.createElement('div');
-      slide.className = 'bg-carousel-slide' + (i === 0 ? ' active' : '');
-      slide.style.backgroundImage = `url('${src}')`;
-      carousel.appendChild(slide);
-    });
-    let current = 0;
-    const slides = carousel.querySelectorAll('.bg-carousel-slide');
-    setInterval(() => {
-      slides[current].classList.remove('active');
-      current = (current + 1) % slides.length;
-      slides[current].classList.add('active');
-    }, 5000);
-  </script>
-  <script>
-    function filterCars(category, btn) {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      document.querySelectorAll('.car-card').forEach(card => {
-        const cats = card.dataset.category || '';
-        card.style.display = (category === 'all' || cats.includes(category)) ? '' : 'none';
-      });
-    }
-  </script>
+  <script src="js/main.js" defer></script>
+  <script src="js/helpers.js" defer></script>
 </body>
 </html>

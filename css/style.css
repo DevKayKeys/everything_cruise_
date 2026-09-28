@@ -557,140 +557,35 @@ footer {
 
 footer span { color: var(--gold); }
 
-/* ===== AI CHAT WIDGET ===== */
-#chat-toggle {
-  position: fixed;
-  bottom: 28px;
-  right: 28px;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  background: var(--gold);
-  color: var(--black);
-  border: none;
-  cursor: pointer;
-  font-size: 1.6rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 18px rgba(201,168,76,0.5);
-  z-index: 999;
-  transition: background 0.2s, transform 0.2s;
-}
-
-#chat-toggle:hover { background: var(--gold-light); transform: scale(1.08); }
-
-#chat-box {
-  position: fixed;
-  bottom: 100px;
-  right: 28px;
-  width: 340px;
-  max-height: 480px;
-  background: #111;
-  border: 1.5px solid var(--gold);
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  z-index: 998;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.6);
-  overflow: hidden;
-  transition: opacity 0.2s, transform 0.2s;
-}
-
-#chat-box.hidden {
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(16px);
-}
-
-.chat-header {
-  background: var(--gold);
-  color: var(--black);
-  padding: 0.75rem 1rem;
-  font-weight: 700;
-  font-size: 0.95rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.chat-header button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1.1rem;
-  color: var(--black);
+/* ===== HUGEICONS ICON FONT ===== */
+.hgi-stroke {
   line-height: 1;
+  vertical-align: -0.125em;
 }
 
-#chat-messages {
-  flex: 1;
-  overflow-y: auto;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  font-size: 0.9rem;
+.title-icon {
+  font-size: 1.15em;
+  color: var(--gold);
+  margin-right: 0.35rem;
+  vertical-align: -0.1em;
 }
 
-.msg {
-  max-width: 85%;
-  padding: 0.55rem 0.85rem;
-  border-radius: 10px;
-  line-height: 1.5;
-  word-break: break-word;
+.card-icon {
+  display: block;
+  font-size: 2.1rem;
+  color: var(--gold);
+  margin-bottom: 0.85rem;
 }
 
-.msg.user {
-  align-self: flex-end;
-  background: var(--gold);
-  color: var(--black);
-  border-bottom-right-radius: 2px;
+.trust-item .hgi-stroke {
+  font-size: 1.5rem;
+  color: var(--gold);
 }
 
-.msg.bot {
-  align-self: flex-start;
-  background: rgba(255,255,255,0.1);
-  color: var(--white);
-  border-bottom-left-radius: 2px;
+.car-meta .hgi-stroke {
+  font-size: 1rem;
+  color: var(--gold);
 }
-
-.msg.typing { font-style: italic; opacity: 0.6; }
-
-.chat-input-row {
-  display: flex;
-  border-top: 1px solid rgba(201,168,76,0.3);
-  padding: 0.6rem;
-  gap: 0.5rem;
-}
-
-#chat-input {
-  flex: 1;
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(201,168,76,0.4);
-  border-radius: 6px;
-  padding: 0.5rem 0.75rem;
-  color: var(--white);
-  font-size: 0.9rem;
-  outline: none;
-  font-family: inherit;
-}
-
-#chat-input:focus { border-color: var(--gold); }
-
-#chat-send {
-  background: var(--gold);
-  color: var(--black);
-  border: none;
-  border-radius: 6px;
-  padding: 0.5rem 0.9rem;
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 0.9rem;
-  transition: background 0.2s;
-}
-
-#chat-send:hover { background: var(--gold-light); }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
@@ -700,7 +595,202 @@ footer span { color: var(--gold); }
 @media (max-width: 600px) {
   nav { padding: 0 1rem; }
   .nav-links { gap: 1rem; }
-  #chat-box { width: calc(100vw - 32px); right: 16px; }
   .page-hero { height: 240px; padding: 1.5rem; }
   .trust-strip { gap: 0.75rem; }
+}
+
+/* ===== LAUNCH POLISH ===== */
+img { max-width: 100%; }
+
+.car-card-img,
+.car-card > img { aspect-ratio: 3 / 2; }
+.car-card-img img { height: 100%; }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--gold-light);
+  outline-offset: 2px;
+}
+
+/* ===== MOBILE NAV TOGGLE ===== */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--gold);
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.25rem;
+  margin-left: auto;
+}
+
+.nav-links { transition: max-height 0.3s ease; }
+
+@media (max-width: 768px) {
+  nav { flex-wrap: wrap; }
+  .nav-toggle { display: flex; align-items: center; }
+  .nav-links {
+    display: flex;
+    flex: 1 1 100%;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    background: rgba(10,10,10,0.97);
+    border-top: 2px solid var(--gold);
+  }
+  .nav-links.open { max-height: 360px; }
+  .nav-links a {
+    display: block;
+    padding: 0.9rem 1.5rem;
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+    width: 100%;
+  }
+}
+
+/* ===== FOOTER ===== */
+footer { padding: 0; }
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.4fr;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 2rem;
+  text-align: left;
+}
+
+.footer-col { display: flex; flex-direction: column; gap: 0.6rem; }
+.footer-brand { gap: 1rem; }
+.footer-brand .nav-logo { width: 100%; }
+.footer-brand p { color: rgba(255,255,255,0.65); font-size: 0.9rem; line-height: 1.6; }
+
+.footer-col h4 {
+  color: var(--gold);
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+}
+
+.footer-col a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.2s;
+}
+
+.footer-col a:hover { color: var(--gold); }
+
+.footer-socials { display: flex; gap: 0.7rem; }
+
+.footer-socials a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(201,168,76,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: var(--gold);
+}
+
+.footer-socials a:hover { background: var(--gold); color: var(--black); }
+
+.footer-bottom {
+  border-top: 1px solid rgba(201,168,76,0.2);
+  text-align: center;
+  padding: 1.2rem 1rem;
+  color: rgba(255,255,255,0.5);
+  font-size: 0.85rem;
+}
+
+/* ===== STATS STRIP ===== */
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.25rem;
+  margin: 3rem 0 1rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(201,168,76,0.25);
+  border-radius: 12px;
+}
+
+.stat-item .stat-icon { font-size: 2rem; color: var(--gold); display: block; margin-bottom: 0.5rem; }
+.stat-item strong { display: block; font-size: 1.6rem; color: var(--white); }
+.stat-item span { color: rgba(255,255,255,0.6); font-size: 0.85rem; }
+
+/* ===== INVENTORY PREVIEW (home) ===== */
+.inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.inventory-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  display: block;
+  text-decoration: none;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.inventory-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(201,168,76,0.2); }
+
+.inventory-card img { width: 100%; height: 100%; object-fit: cover; }
+.inventory-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10,10,10,0.92), rgba(10,10,10,0.15));
+}
+
+.inventory-card-body {
+  position: absolute;
+  z-index: 2;
+  left: 1.25rem;
+  right: 1.25rem;
+  bottom: 1.25rem;
+}
+
+.inventory-card-body h3 { color: var(--gold); font-size: 1.15rem; margin-bottom: 0.25rem; }
+.inventory-card-body p { color: rgba(255,255,255,0.75); font-size: 0.88rem; }
+
+/* ===== TEAM AVATAR ===== */
+.team-avatar {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--gold);
+  margin-bottom: 0.9rem;
+  display: block;
+}
+
+/* ===== 404 ===== */
+.error-hero { text-align: center; padding: 5rem 1rem 3rem; }
+.error-hero .error-icon { font-size: 4rem; color: var(--gold); display: block; margin-bottom: 1rem; }
+.error-hero h1 { font-size: clamp(2.4rem, 6vw, 3.5rem); color: var(--gold); margin-bottom: 0.5rem; }
+.error-hero p { color: rgba(255,255,255,0.75); margin-bottom: 2rem; }
+
+@media (max-width: 768px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 1.75rem; }
 }

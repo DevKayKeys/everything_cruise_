@@ -3,8 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Everything Cruise</title>
+  <title>About Us | Everything Cruise</title>
+  <meta name="description" content="Learn about Everything Cruise - a full-service car dealership in Abeokuta, Nigeria offering brand new, UK used and Nigerian used cars, car swaps and mechanical services." />
+  <meta name="author" content="Everything Cruise" />
+  <link rel="canonical" href="https://www.everythingcruise.com/about.html" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <link rel="icon" type="image/png" href="./Images/1-removebg-preview.png" />
+  <link rel="apple-touch-icon" href="./Images/1-removebg-preview.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Everything Cruise" />
+  <meta property="og:title" content="About Us | Everything Cruise" />
+  <meta property="og:description" content="Our story, mission, and the people behind Everything Cruise - a full-service auto company in Abeokuta, Nigeria." />
+  <meta property="og:url" content="https://www.everythingcruise.com/about.html" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1200&q=80" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About Us | Everything Cruise" />
+  <meta name="twitter:description" content="Our story, mission, and the people behind Everything Cruise." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1200&q=80" />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="preconnect" href="https://use.hugeicons.com" crossorigin />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://use.hugeicons.com/font/icons.css" />
 </head>
 <body>
   <div class="bg-carousel" id="bgCarousel"></div>
@@ -15,7 +34,8 @@
         <img src="./Images/1-removebg-preview.png" alt="Everything Cruise Logo" />
         <span>Everything Cruise</span>
       </a>
-      <ul class="nav-links">
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><i class="hgi-stroke hgi-menu-02"></i></button>
+      <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
@@ -24,39 +44,75 @@
     </nav>
 
     <main>
-      <h2 class="section-title">About Us</h2>
-      <p class="section-sub">Our story, mission, and the people behind Everything Cruise.</p>
+      <div class="page-hero">
+        <img class="hero-bg" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1400&q=80" alt="About Everything Cruise" />
+        <div class="page-hero-content">
+          <h1>About Us</h1>
+          <p>Our story, mission, and the people behind Everything Cruise.</p>
+        </div>
+      </div>
 
       <div class="cards">
         <div class="card">
+          <i class="hgi-stroke hgi-book-open-01 card-icon"></i>
           <h3>Our Story</h3>
           <p>Everything Cruise was born from a passion for automobiles and a desire to make car ownership accessible to everyone. What started as a small dealership has grown into a full-service auto company trusted by hundreds of satisfied customers.</p>
         </div>
         <div class="card">
+          <i class="hgi-stroke hgi-target-01 card-icon"></i>
           <h3>Our Mission</h3>
           <p>To connect every Nigerian with the right car at the right price — whether brand new, UK used, or Nigerian used — while providing honest, reliable service every step of the way.</p>
         </div>
         <div class="card">
+          <i class="hgi-stroke hgi-heart card-icon"></i>
           <h3>Our Values</h3>
           <p>Transparency, integrity, and customer satisfaction drive everything we do. We don't just sell cars — we build long-term relationships with our clients.</p>
         </div>
       </div>
+
+      <section>
+        <div class="stats-strip">
+          <div class="stat-item">
+            <i class="hgi-stroke hgi-handshake stat-icon"></i>
+            <strong>500+</strong>
+            <span>Cars Delivered</span>
+          </div>
+          <div class="stat-item">
+            <i class="hgi-stroke hgi-award-01 stat-icon"></i>
+            <strong>7+ Years</strong>
+            <span>In The Business</span>
+          </div>
+          <div class="stat-item">
+            <i class="hgi-stroke hgi-shield-01 stat-icon"></i>
+            <strong>100%</strong>
+            <span>Certified &amp; Genuine</span>
+          </div>
+          <div class="stat-item">
+            <i class="hgi-stroke hgi-user-group stat-icon"></i>
+            <strong>500+</strong>
+            <span>Happy Customers</span>
+          </div>
+        </div>
+      </section>
 
       <section class="team-section">
         <h2 class="section-title">Meet the Team</h2>
         <p class="section-sub">The people who make Everything Cruise run smoothly.</p>
         <div class="cards">
           <div class="card">
+            <img class="team-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Portrait of Ojuri Adekunle Ifeoluwa" loading="lazy" decoding="async" />
             <h3>OJURI adekunle ifeoluwa</h3>
-            <h4>CEO & Founder</h4>
+            <h4>CEO &amp; Founder</h4>
             <p>Auto industry veteran with over 7 years of experience in car sales and imports.</p>
           </div>
           <div class="card">
+            <img class="team-avatar" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" alt="Portrait of Ojuri Temitope Mary" loading="lazy" decoding="async" />
             <h3>OJURI temitope mary</h3>
             <h4>Head of Sales</h4>
             <p>Dedicated to matching every client with their perfect vehicle at the best price.</p>
           </div>
           <div class="card">
+            <img class="team-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80" alt="Portrait of Olavoye Abayomi Oluwaseun" loading="lazy" decoding="async" />
             <h3>OLAWOYE abayomi oluwaseun</h3>
             <h4>Chief Mechanic</h4>
             <p>Certified auto engineer ensuring every car we sell and service meets top standards.</p>
@@ -66,52 +122,51 @@
     </main>
 
     <footer>
-      <p>&copy; 2026 <span>Everything Cruise</span>. All rights reserved.</p>
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="nav-logo">
+            <img src="./Images/1-removebg-preview.png" alt="Everything Cruise Logo" />
+            <span>Everything Cruise</span>
+          </a>
+          <p>Your trusted destination for brand new, UK used and Nigerian used cars, car swaps and expert mechanical support in Abeokuta, Nigeria.</p>
+          <div class="footer-socials">
+            <a href="https://wa.me/2348121966147" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="hgi-stroke hgi-whatsapp"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Follow on Instagram"><i class="hgi-stroke hgi-instagram"></i></a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Follow on Facebook"><i class="hgi-stroke hgi-facebook-01"></i></a>
+            <a href="https://x.com/" target="_blank" rel="noopener" aria-label="Follow on Twitter"><i class="hgi-stroke hgi-twitter"></i></a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="Watch on YouTube"><i class="hgi-stroke hgi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <a href="brand-new-cars.html">Brand New Cars</a>
+          <a href="uk-used-cars.html">UK Used Cars</a>
+          <a href="nigerian-used-cars.html">Nigerian Used Cars</a>
+          <a href="car-swap.html">Car Swap</a>
+          <a href="mechanical-assistance.html">Mechanical Assistance</a>
+        </div>
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <a href="mailto:kaykeys864@gmail.com"><i class="hgi-stroke hgi-mail-01"></i> kaykeys864@gmail.com</a>
+          <a href="tel:+2348121966147"><i class="hgi-stroke hgi-phone"></i> +234 812 196 6147</a>
+          <a href="https://maps.google.com/?q=Abeokuta+Nigeria" target="_blank" rel="noopener"><i class="hgi-stroke hgi-map-pin"></i> Abeokuta, Nigeria</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year">2026</span> <span>Everything Cruise</span>. All rights reserved.</p>
+      </div>
     </footer>
   </div>
 
-  <!-- AI Chat Widget -->
-  <button id="chat-toggle" aria-label="Open support chat">💬</button>
-  <div id="chat-box" class="hidden" role="dialog" aria-label="Customer support chat">
-    <div class="chat-header">
-      <span>Everything Cruise Support</span>
-      <button id="chat-close" aria-label="Close chat">✕</button>
-    </div>
-    <div id="chat-messages" aria-live="polite"></div>
-    <div class="chat-input-row">
-      <input id="chat-input" type="text" placeholder="Ask about our cars..." autocomplete="off" />
-      <button id="chat-send">Send</button>
-    </div>
-  </div>
 
-  <script src="js/main.js"></script>
-  <script src="js/chat.js"></script>
-  <script>
-    const bgImages = [
-      'Images/IMG-20241225-WA0039.jpg',
-      'Images/IMG-20241229-WA0017.jpg',
-      'Images/IMG-20241230-WA0052.jpg',
-      'Images/IMG-20241230-WA0054.jpg',
-      'Images/IMG-20240723-WA0062.jpg',
-      'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=80',
-      'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80',
-      'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=1920&q=80',
-      'https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1920&q=80',
-    ];
-    const carousel = document.getElementById('bgCarousel');
-    bgImages.forEach((src, i) => {
-      const slide = document.createElement('div');
-      slide.className = 'bg-carousel-slide' + (i === 0 ? ' active' : '');
-      slide.style.backgroundImage = `url('${src}')`;
-      carousel.appendChild(slide);
-    });
-    let current = 0;
-    const slides = carousel.querySelectorAll('.bg-carousel-slide');
-    setInterval(() => {
-      slides[current].classList.remove('active');
-      current = (current + 1) % slides.length;
-      slides[current].classList.add('active');
-    }, 5000);
-  </script>
+  <script src="js/main.js" defer></script>
+  <script src="js/helpers.js" defer></script>
 </body>
 </html>

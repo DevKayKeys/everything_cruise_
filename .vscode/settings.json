@@ -1,2 +1,11 @@
 {
+    "kiroAgent.trustedCommands": [
+        "git remote add origin",
+        "git remote -v",
+        "git remote set-url origin https://github.com/DevKayKeys/everything_cruise_ && git push -u origin HEAD",
+        "git push -u origin HEAD",
+        "git remote set-url origin https://github.com/DevKayKeys/everything_cruise_",
+        "git remote add origin https://github.com/DevKayKeys/everything_cruise_",
+        "git status"
+    ]
 }

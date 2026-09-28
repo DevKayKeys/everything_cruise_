@@ -4,7 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nigerian Used Cars | Everything Cruise</title>
+  <meta name="description" content="Nigerian used cars for sale in Abeokuta - Toyota Corolla, Honda Accord, Highlander and more, priced fairly and inspected thoroughly." />
+  <meta name="author" content="Everything Cruise" />
+  <link rel="canonical" href="https://www.everythingcruise.com/nigerian-used-cars.html" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <link rel="icon" type="image/png" href="./Images/1-removebg-preview.png" />
+  <link rel="apple-touch-icon" href="./Images/1-removebg-preview.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Everything Cruise" />
+  <meta property="og:title" content="Nigerian Used Cars | Everything Cruise" />
+  <meta property="og:description" content="Locally used vehicles in great condition - priced fairly, inspected thoroughly, ready to drive." />
+  <meta property="og:url" content="https://www.everythingcruise.com/nigerian-used-cars.html" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1200&q=80" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nigerian Used Cars | Everything Cruise" />
+  <meta name="twitter:description" content="Priced fairly, inspected thoroughly, ready to drive." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1200&q=80" />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="preconnect" href="https://use.hugeicons.com" crossorigin />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://use.hugeicons.com/font/icons.css" />
 </head>
 <body>
   <div class="bg-carousel" id="bgCarousel"></div>
@@ -15,7 +34,8 @@
         <img src="./Images/1-removebg-preview.png" alt="Everything Cruise Logo" />
         <span>Everything Cruise</span>
       </a>
-      <ul class="nav-links">
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><i class="hgi-stroke hgi-menu-02"></i></button>
+      <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html" class="active">Services</a></li>
@@ -25,56 +45,153 @@
 
     <main>
       <a href="services.html" class="back-link">&larr; Back to Services</a>
-      <h2 class="section-title">🇳🇬 Nigerian Used Cars</h2>
+      <h2 class="section-title"><i class="hgi-stroke hgi-car-02 title-icon"></i>Nigerian Used Cars</h2>
       <p class="section-sub">Locally used vehicles in great condition — priced fairly, inspected thoroughly, ready to drive.</p>
 
-      <div class="car-cards">
-        <div class="car-card">
-          <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=600&q=80" alt="Toyota Corolla" />
+      <div class="filter-bar">
+        <span>Filter by:</span>
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="sedan">Sedans</button>
+        <button class="filter-btn" data-filter="suv">SUVs</button>
+        <button class="filter-btn" data-filter="luxury">Luxury</button>
+      </div>
+
+      <div class="car-cards" id="car-grid">
+        <div class="car-card" data-category="sedan">
+          <div class="car-card-img">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=700&q=80" alt="Toyota Corolla 2018" />
+            <span class="badge badge-hot">Best Seller</span>
+          </div>
           <div class="car-card-body">
             <h3>Toyota Corolla 2018</h3>
+            <div class="car-meta">
+              <span><i class="hgi-stroke hgi-calendar-01"></i> 2018</span>
+              <span><i class="hgi-stroke hgi-fuel-02"></i> Petrol</span>
+              <span><i class="hgi-stroke hgi-car-03"></i> Sedan</span>
+            </div>
             <p>Reliable and fuel-efficient sedan, well maintained with clean interior and smooth ride.</p>
-            <span class="car-price-tag">₦7,500,000 – ₦9,500,000</span>
+            <div class="car-card-footer">
+              <div class="car-price">
+                ₦7.5M – ₦9.5M
+                <small>Starting price</small>
+              </div>
+              <a href="contact.html" class="card-enquire">Enquire</a>
+            </div>
           </div>
         </div>
-        <div class="car-card">
-          <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=600&q=80" alt="Honda Accord" />
+
+        <div class="car-card" data-category="sedan">
+          <div class="car-card-img">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=700&q=80" alt="Honda Accord 2017" />
+            <span class="badge badge-new">Locally Used</span>
+          </div>
           <div class="car-card-body">
             <h3>Honda Accord 2017</h3>
+            <div class="car-meta">
+              <span><i class="hgi-stroke hgi-calendar-01"></i> 2017</span>
+              <span><i class="hgi-stroke hgi-fuel-02"></i> Petrol</span>
+              <span><i class="hgi-stroke hgi-car-03"></i> Sedan</span>
+            </div>
             <p>Popular executive saloon with spacious cabin, responsive handling, and solid build quality.</p>
-            <span class="car-price-tag">₦6,800,000 – ₦8,500,000</span>
+            <div class="car-card-footer">
+              <div class="car-price">
+                ₦6.8M – ₦8.5M
+                <small>Starting price</small>
+              </div>
+              <a href="contact.html" class="card-enquire">Enquire</a>
+            </div>
           </div>
         </div>
-        <div class="car-card">
-          <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=600&q=80" alt="Toyota Highlander" />
+
+        <div class="car-card" data-category="suv">
+          <div class="car-card-img">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=700&q=80" alt="Toyota Highlander 2016" />
+            <span class="badge badge-hot">Best Seller</span>
+          </div>
           <div class="car-card-body">
             <h3>Toyota Highlander 2016</h3>
+            <div class="car-meta">
+              <span><i class="hgi-stroke hgi-calendar-01"></i> 2016</span>
+              <span><i class="hgi-stroke hgi-fuel-02"></i> Petrol</span>
+              <span><i class="hgi-stroke hgi-car-03"></i> SUV (7-Seat)</span>
+            </div>
             <p>Rugged 7-seater SUV perfect for Nigerian roads — powerful, spacious, and dependable.</p>
-            <span class="car-price-tag">₦12,000,000 – ₦15,000,000</span>
+            <div class="car-card-footer">
+              <div class="car-price">
+                ₦12M – ₦15M
+                <small>Starting price</small>
+              </div>
+              <a href="contact.html" class="card-enquire">Enquire</a>
+            </div>
           </div>
         </div>
-        <div class="car-card">
-          <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=600&q=80" alt="Lexus ES 350" />
+
+        <div class="car-card" data-category="sedan luxury">
+          <div class="car-card-img">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=700&q=80" alt="Lexus ES 350 2017" />
+            <span class="badge badge-new">Locally Used</span>
+          </div>
           <div class="car-card-body">
             <h3>Lexus ES 350 2017</h3>
+            <div class="car-meta">
+              <span><i class="hgi-stroke hgi-calendar-01"></i> 2017</span>
+              <span><i class="hgi-stroke hgi-fuel-02"></i> Petrol</span>
+              <span><i class="hgi-stroke hgi-car-03"></i> Luxury Sedan</span>
+            </div>
             <p>Premium luxury saloon with buttery smooth V6, plush leather seats, and quiet cabin.</p>
-            <span class="car-price-tag">₦11,000,000 – ₦14,000,000</span>
+            <div class="car-card-footer">
+              <div class="car-price">
+                ₦11M – ₦14M
+                <small>Starting price</small>
+              </div>
+              <a href="contact.html" class="card-enquire">Enquire</a>
+            </div>
           </div>
         </div>
-        <div class="car-card">
-          <img src="https://images.unsplash.com/photo-1609521263047-f8f205293f24?auto=format&fit=crop&w=600&q=80" alt="Toyota Venza" />
+
+        <div class="car-card" data-category="suv">
+          <div class="car-card-img">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1609521263047-f8f205293f24?auto=format&fit=crop&w=700&q=80" alt="Toyota Venza 2015" />
+            <span class="badge badge-new">Locally Used</span>
+          </div>
           <div class="car-card-body">
             <h3>Toyota Venza 2015</h3>
+            <div class="car-meta">
+              <span><i class="hgi-stroke hgi-calendar-01"></i> 2015</span>
+              <span><i class="hgi-stroke hgi-fuel-02"></i> Petrol</span>
+              <span><i class="hgi-stroke hgi-car-03"></i> SUV</span>
+            </div>
             <p>Stylish crossover SUV with panoramic roof, comfortable ride, and ample cargo space.</p>
-            <span class="car-price-tag">₦8,500,000 – ₦11,000,000</span>
+            <div class="car-card-footer">
+              <div class="car-price">
+                ₦8.5M – ₦11M
+                <small>Starting price</small>
+              </div>
+              <a href="contact.html" class="card-enquire">Enquire</a>
+            </div>
           </div>
         </div>
-        <div class="car-card">
-          <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=600&q=80" alt="Ford Edge" />
+
+        <div class="car-card" data-category="suv">
+          <div class="car-card-img">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=700&q=80" alt="Ford Edge 2016" />
+            <span class="badge badge-new">Locally Used</span>
+          </div>
           <div class="car-card-body">
             <h3>Ford Edge 2016</h3>
+            <div class="car-meta">
+              <span><i class="hgi-stroke hgi-calendar-01"></i> 2016</span>
+              <span><i class="hgi-stroke hgi-fuel-02"></i> Petrol</span>
+              <span><i class="hgi-stroke hgi-car-03"></i> SUV</span>
+            </div>
             <p>Bold mid-size SUV with twin-turbo engine, SYNC infotainment, and strong road presence.</p>
-            <span class="car-price-tag">₦9,000,000 – ₦12,000,000</span>
+            <div class="car-card-footer">
+              <div class="car-price">
+                ₦9M – ₦12M
+                <small>Starting price</small>
+              </div>
+              <a href="contact.html" class="card-enquire">Enquire</a>
+            </div>
           </div>
         </div>
       </div>
@@ -85,51 +202,51 @@
     </main>
 
     <footer>
-      <p>&copy; 2026 <span>Everything Cruise</span>. All rights reserved.</p>
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="nav-logo">
+            <img src="./Images/1-removebg-preview.png" alt="Everything Cruise Logo" />
+            <span>Everything Cruise</span>
+          </a>
+          <p>Your trusted destination for brand new, UK used and Nigerian used cars, car swaps and expert mechanical support in Abeokuta, Nigeria.</p>
+          <div class="footer-socials">
+            <a href="https://wa.me/2348121966147" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="hgi-stroke hgi-whatsapp"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Follow on Instagram"><i class="hgi-stroke hgi-instagram"></i></a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Follow on Facebook"><i class="hgi-stroke hgi-facebook-01"></i></a>
+            <a href="https://x.com/" target="_blank" rel="noopener" aria-label="Follow on Twitter"><i class="hgi-stroke hgi-twitter"></i></a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="Watch on YouTube"><i class="hgi-stroke hgi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <a href="brand-new-cars.html">Brand New Cars</a>
+          <a href="uk-used-cars.html">UK Used Cars</a>
+          <a href="nigerian-used-cars.html">Nigerian Used Cars</a>
+          <a href="car-swap.html">Car Swap</a>
+          <a href="mechanical-assistance.html">Mechanical Assistance</a>
+        </div>
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <a href="mailto:kaykeys864@gmail.com"><i class="hgi-stroke hgi-mail-01"></i> kaykeys864@gmail.com</a>
+          <a href="tel:+2348121966147"><i class="hgi-stroke hgi-phone"></i> +234 812 196 6147</a>
+          <a href="https://maps.google.com/?q=Abeokuta+Nigeria" target="_blank" rel="noopener"><i class="hgi-stroke hgi-map-pin"></i> Abeokuta, Nigeria</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year">2026</span> <span>Everything Cruise</span>. All rights reserved.</p>
+      </div>
     </footer>
   </div>
 
-  <button id="chat-toggle" aria-label="Open support chat">💬</button>
-  <div id="chat-box" class="hidden" role="dialog" aria-label="Customer support chat">
-    <div class="chat-header">
-      <span>Everything Cruise Support</span>
-      <button id="chat-close" aria-label="Close chat">✕</button>
-    </div>
-    <div id="chat-messages" aria-live="polite"></div>
-    <div class="chat-input-row">
-      <input id="chat-input" type="text" placeholder="Ask about our cars..." autocomplete="off" />
-      <button id="chat-send">Send</button>
-    </div>
-  </div>
 
-  <script src="js/main.js"></script>
-  <script src="js/chat.js"></script>
-  <script>
-    const bgImages = [
-      'Images/IMG-20241225-WA0039.jpg',
-      'Images/IMG-20241229-WA0017.jpg',
-      'Images/IMG-20241230-WA0052.jpg',
-      'Images/IMG-20241230-WA0054.jpg',
-      'Images/IMG-20240723-WA0062.jpg',
-      'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=80',
-      'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80',
-      'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=1920&q=80',
-      'https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1920&q=80',
-    ];
-    const carousel = document.getElementById('bgCarousel');
-    bgImages.forEach((src, i) => {
-      const slide = document.createElement('div');
-      slide.className = 'bg-carousel-slide' + (i === 0 ? ' active' : '');
-      slide.style.backgroundImage = `url('${src}')`;
-      carousel.appendChild(slide);
-    });
-    let current = 0;
-    const slides = carousel.querySelectorAll('.bg-carousel-slide');
-    setInterval(() => {
-      slides[current].classList.remove('active');
-      current = (current + 1) % slides.length;
-      slides[current].classList.add('active');
-    }, 5000);
-  </script>
+<script src="js/main.js" defer></script>
+  <script src="js/helpers.js" defer></script>
 </body>
 </html>
