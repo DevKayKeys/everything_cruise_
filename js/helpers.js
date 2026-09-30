@@ -11,15 +11,11 @@ var SITE_CONFIG = {
 
 function initBackgroundCarousel() {
   const bgImages = [
-    'Images/IMG-20241225-WA0039.jpg',
-    'Images/IMG-20241229-WA0017.jpg',
-    'Images/IMG-20241230-WA0052.jpg',
-    'Images/IMG-20241230-WA0054.jpg',
-    'Images/IMG-20240723-WA0062.jpg',
-    'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=80',
     'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80',
+    'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=80',
     'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=1920&q=80',
     'https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1920&q=80',
+    'https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=1920&q=80',
   ];
 
   const carousel = document.getElementById('bgCarousel');
@@ -77,10 +73,79 @@ function initDynamicYear() {
   if (el) el.textContent = String(new Date().getFullYear());
 }
 
+function initHeroShowcase() {
+  const root = document.getElementById('heroShowcase');
+  if (!root) return;
+
+  const slides = Array.from(root.querySelectorAll('.hero-slide'));
+  const dots = Array.from(root.querySelectorAll('.hero-dot'));
+  if (slides.length < 2) return;
+
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let index = 0;
+  let timer = null;
+
+  const show = (next) => {
+    index = (next + slides.length) % slides.length;
+    slides.forEach((slide, i) => slide.classList.toggle('is-active', i === index));
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('is-active', i === index);
+      dot.setAttribute('aria-selected', i === index ? 'true' : 'false');
+    });
+  };
+
+  const stop = () => {
+    if (timer) { clearInterval(timer); timer = null; }
+  };
+
+  const play = () => {
+    stop();
+    if (reduced || document.hidden) return;
+    timer = setInterval(() => show(index + 1), 6000);
+  };
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      show(i);
+      play();
+    });
+  });
+
+  root.addEventListener('mouseenter', stop);
+  root.addEventListener('mouseleave', play);
+  document.addEventListener('visibilitychange', play);
+
+  show(0);
+  play();
+}
+
+function initReveal() {
+  const items = document.querySelectorAll('.reveal');
+  if (!items.length) return;
+
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduced || !('IntersectionObserver' in window)) {
+    items.forEach((el) => el.classList.add('in'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('in');
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.18, rootMargin: '0px 0px -6% 0px' });
+
+  items.forEach((el) => observer.observe(el));
+}
+
 // Initialize shared widgets on DOM load
 document.addEventListener('DOMContentLoaded', () => {
   initBackgroundCarousel();
   initCarFilters();
   initMobileNav();
   initDynamicYear();
+  initHeroShowcase();
+  initReveal();
 });

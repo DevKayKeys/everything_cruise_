@@ -6,6 +6,7 @@
         "git push -u origin HEAD",
         "git remote set-url origin https://github.com/DevKayKeys/everything_cruise_",
         "git remote add origin https://github.com/DevKayKeys/everything_cruise_",
-        "git status"
+        "git status",
+        "git push -u origin master"
     ]
 }

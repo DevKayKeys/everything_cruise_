@@ -66,28 +66,182 @@
       </ul>
     </nav>
 
-    <main>
-      <section class="hero">
-        <h1>Welcome to <br>EVERYTHING CRUISE</h1>
-        <p>Your trusted destination for brand new cars, UK used, Nigerian used, car swaps, and expert mechanical support.</p>
-        <a href="services.html" class="btn">Explore Our Cars</a>
+    <main class="home-main">
+      <!-- ===== FULLSCREEN HERO SLIDESHOW ===== -->
+      <section class="hero-showcase" id="heroShowcase" aria-roledescription="carousel" aria-label="Everything Cruise highlights">
+        <div class="hero-slides">
+          <article class="hero-slide is-active" style="--slide-img: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80');">
+            <div class="hero-slide-content">
+              <span class="hero-kicker">Abeokuta, Nigeria</span>
+              <h1>Welcome to Everything Cruise</h1>
+              <p>Your trusted destination for brand new cars, UK used, Nigerian used, car swaps, and expert mechanical support.</p>
+              <div class="hero-actions">
+                <a href="services.html" class="btn">Explore Our Cars</a>
+                <a href="https://wa.me/2348121966147" target="_blank" rel="noopener" class="btn btn-ghost">Chat on WhatsApp</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="hero-slide" style="--slide-img: url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=80');">
+            <div class="hero-slide-content">
+              <span class="hero-kicker">Brand New</span>
+              <h2>Factory-Fresh. Fully Covered.</h2>
+              <p>Drive away in a brand new vehicle with full manufacturer warranty and paperwork handled from start to finish.</p>
+              <div class="hero-actions">
+                <a href="brand-new-cars.html" class="btn">View Brand New Cars</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="hero-slide" style="--slide-img: url('https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=1920&q=80');">
+            <div class="hero-slide-content">
+              <span class="hero-kicker">UK Used</span>
+              <h2>Imported. Inspected. Verified.</h2>
+              <p>Foreign-used vehicles imported directly from the UK, checked on arrival and sold with a history you can trust.</p>
+              <div class="hero-actions">
+                <a href="uk-used-cars.html" class="btn">View UK Used Cars</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="hero-slide" style="--slide-img: url('https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1920&q=80');">
+            <div class="hero-slide-content">
+              <span class="hero-kicker">Nigerian Used</span>
+              <h2>Solid Cars. Fair Prices.</h2>
+              <p>Locally used vehicles in great condition, thoroughly checked and priced fairly - value without compromise.</p>
+              <div class="hero-actions">
+                <a href="nigerian-used-cars.html" class="btn">View Nigerian Used Cars</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="hero-dots" role="tablist" aria-label="Choose a slide">
+          <button type="button" class="hero-dot is-active" role="tab" aria-selected="true" aria-label="Slide 1: Welcome"></button>
+          <button type="button" class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 2: Brand new cars"></button>
+          <button type="button" class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 3: UK used cars"></button>
+          <button type="button" class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 4: Nigerian used cars"></button>
+        </div>
+
+        <a href="#brand-new" class="hero-scroll" aria-label="Scroll to our cars"><span class="hero-scroll-arrow"></span></a>
       </section>
 
-      <section>
+      <!-- ===== SHOWCASE: BRAND NEW ===== -->
+      <section class="showcase showcase--left accent-gold" id="brand-new">
+        <div class="showcase-inner">
+          <figure class="showcase-visual reveal from-left">
+            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80" alt="Brand new car offered by Everything Cruise" loading="lazy" decoding="async" />
+            <span class="showcase-line" aria-hidden="true"></span>
+          </figure>
+          <div class="showcase-copy reveal from-right">
+            <span class="ribbon">Factory Fresh</span>
+            <div class="showcase-panel">
+              <h2>Brand New Cars</h2>
+              <p>Drive off in a factory-fresh vehicle with full manufacturer warranty. We stock a wide range of makes and models to suit every taste and budget, and we handle the paperwork end to end.</p>
+              <ul class="showcase-specs">
+                <li>Full manufacturer warranty</li>
+                <li>Any colour or spec you want</li>
+                <li>Financing and paperwork handled for you</li>
+              </ul>
+              <a href="brand-new-cars.html" class="btn">Browse Brand New Cars</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SHOWCASE: UK USED ===== -->
+      <section class="showcase showcase--right accent-steel" id="uk-used">
+        <div class="showcase-inner">
+          <figure class="showcase-visual reveal from-right">
+            <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=1200&q=80" alt="UK used car imported by Everything Cruise" loading="lazy" decoding="async" />
+            <span class="showcase-line" aria-hidden="true"></span>
+          </figure>
+          <div class="showcase-copy reveal from-left">
+            <span class="ribbon">Imported &amp; Inspected</span>
+            <div class="showcase-panel">
+              <h2>UK Used Cars</h2>
+              <p>Imported directly from the UK, our foreign-used vehicles are thoroughly inspected on arrival and come with a verified history - so you know exactly what you are buying.</p>
+              <ul class="showcase-specs">
+                <li>Verified history report</li>
+                <li>Inspected on arrival</li>
+                <li>Honest mileage, honest pricing</li>
+              </ul>
+              <a href="uk-used-cars.html" class="btn">Browse UK Used Cars</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SHOWCASE: NIGERIAN USED ===== -->
+      <section class="showcase showcase--left accent-ember" id="nigerian-used">
+        <div class="showcase-inner">
+          <figure class="showcase-visual reveal from-left">
+            <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1200&q=80" alt="Nigerian used car for sale at Everything Cruise" loading="lazy" decoding="async" />
+            <span class="showcase-line" aria-hidden="true"></span>
+          </figure>
+          <div class="showcase-copy reveal from-right">
+            <span class="ribbon">Great Value</span>
+            <div class="showcase-panel">
+              <h2>Nigerian Used Cars</h2>
+              <p>Locally used vehicles in great condition, priced fairly. Perfect for buyers who want real value without compromising on reliability - every car is checked before it reaches the lot.</p>
+              <ul class="showcase-specs">
+                <li>Thoroughly checked before sale</li>
+                <li>Fair, transparent pricing</li>
+                <li>Ready to drive away</li>
+              </ul>
+              <a href="nigerian-used-cars.html" class="btn">Browse Nigerian Used Cars</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SHOWCASE: MORE THAN A DEALER ===== -->
+      <section class="showcase showcase--center accent-gold" id="more-than-a-dealer">
+        <div class="showcase-inner">
+          <div class="showcase-copy reveal from-below">
+            <span class="ribbon">More Than A Dealer</span>
+            <div class="showcase-panel showcase-panel--wide">
+              <h2>Swap, Service &amp; Advisory</h2>
+              <p>Everything does not stop at the sale. Trade in your current car, keep it running with our certified mechanics, or get free advice before you buy - all under one roof.</p>
+              <div class="mini-grid">
+                <a href="car-swap.html" class="mini-card">
+                  <i class="hgi-stroke hgi-exchange-01 card-icon"></i>
+                  <h3>Car Swap</h3>
+                  <p>Upgrade seamlessly - we value your car and handle the paperwork.</p>
+                </a>
+                <a href="mechanical-assistance.html" class="mini-card">
+                  <i class="hgi-stroke hgi-wrench-01 card-icon"></i>
+                  <h3>Mechanical Assistance</h3>
+                  <p>Diagnostics, servicing and repairs from certified mechanics.</p>
+                </a>
+                <a href="car-advisory.html" class="mini-card">
+                  <i class="hgi-stroke hgi-clipboard-check card-icon"></i>
+                  <h3>Car Advisory</h3>
+                  <p>Free consultation to help you pick the right car for your budget.</p>
+                </a>
+              </div>
+              <a href="services.html" class="btn">View All Services</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== WHY CHOOSE US ===== -->
+      <section class="home-section" id="why">
         <h2 class="section-title">Why Choose Everything Cruise</h2>
         <p class="section-sub">Driven by trust, powered by passion for automobiles.</p>
         <div class="cards">
-          <div class="card">
+          <div class="card reveal from-card">
             <i class="hgi-stroke hgi-cards-01 card-icon"></i>
             <h3>Wide Selection</h3>
             <p>From factory-fresh brand new cars to quality UK and Nigerian used vehicles — we have the right car for every budget.</p>
           </div>
-          <div class="card">
+          <div class="card reveal from-card">
             <i class="hgi-stroke hgi-exchange-01 card-icon"></i>
             <h3>Car Swap Service</h3>
             <p>Want to upgrade? We make swapping your current car for a new one seamless, fair, and stress-free.</p>
           </div>
-          <div class="card">
+          <div class="card reveal from-card">
             <i class="hgi-stroke hgi-wrench-01 card-icon"></i>
             <h3>Mechanical Support</h3>
             <p>Our certified mechanics are on hand to keep your vehicle in top shape, from routine checks to full repairs.</p>
@@ -95,8 +249,9 @@
         </div>
       </section>
 
-      <section>
-        <div class="stats-strip">
+      <!-- ===== STATS ===== -->
+      <section class="home-section home-section--tight">
+        <div class="stats-strip reveal">
           <div class="stat-item">
             <i class="hgi-stroke hgi-handshake stat-icon"></i>
             <strong>500+</strong>
@@ -120,34 +275,20 @@
         </div>
       </section>
 
-      <section>
-        <h2 class="section-title">Explore Our Inventory</h2>
-        <p class="section-sub">Take your pick - every car is inspected, documented, and ready to go.</p>
-        <div class="inventory-grid">
-          <a href="brand-new-cars.html" class="inventory-card">
-            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=800&q=80" alt="Brand new cars" loading="lazy" decoding="async" />
-            <div class="inventory-card-body">
-              <h3>Brand New Cars</h3>
-              <p>Factory-fresh with full manufacturer warranty</p>
-            </div>
-          </a>
-          <a href="uk-used-cars.html" class="inventory-card">
-            <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=800&q=80" alt="UK used cars" loading="lazy" decoding="async" />
-            <div class="inventory-card-body">
-              <h3>UK Used Cars</h3>
-              <p>Verified history, imported &amp; inspected</p>
-            </div>
-          </a>
-          <a href="nigerian-used-cars.html" class="inventory-card">
-            <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=80" alt="Nigerian used cars" loading="lazy" decoding="async" />
-            <div class="inventory-card-body">
-              <h3>Nigerian Used Cars</h3>
-              <p>Great value, priced fairly</p>
-            </div>
-          </a>
-        </div>
-        <div class="cta-center">
-          <a href="services.html" class="btn">View All Services</a>
+      <!-- ===== CONTACT STRIP ===== -->
+      <section class="home-section home-section--tight">
+        <div class="contact-strip reveal">
+          <div class="contact-strip-copy">
+            <h2>Ready to find your car?</h2>
+            <p>Talk to us today — we will help you pick, inspect and finance the right vehicle.</p>
+          </div>
+          <div class="contact-strip-details">
+            <a href="tel:+2348121966147"><i class="hgi-stroke hgi-phone"></i> +234 812 196 6147</a>
+            <a href="https://wa.me/2348121966147" target="_blank" rel="noopener"><i class="hgi-stroke hgi-whatsapp"></i> Chat on WhatsApp</a>
+            <a href="mailto:kaykeys864@gmail.com"><i class="hgi-stroke hgi-mail-01"></i> kaykeys864@gmail.com</a>
+            <a href="https://maps.google.com/?q=Abeokuta+Nigeria" target="_blank" rel="noopener"><i class="hgi-stroke hgi-map-pin"></i> Abeokuta, Nigeria</a>
+          </div>
+          <a href="contact.html" class="btn">Contact Us</a>
         </div>
       </section>
     </main>
@@ -197,7 +338,7 @@
   </div>
 
 
-<script src="js/main.js" defer></script>
   <script src="js/helpers.js" defer></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>
